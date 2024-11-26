@@ -507,6 +507,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
     let now = Date.now();
 
     if (!!window.location.href.match("155.138.228.184")) {
+        // Throttle logic only applies if the URL matches
         if (now - this.lastTime < 1000 / 20) {
             clearTimeout(this.stopTimer);
             this.stopTimer = setTimeout(() => {
